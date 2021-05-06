@@ -23,11 +23,10 @@ class MainActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedList
                 .requestEmail()
                 .build()
 
-
-
         val mGoogleApiClient = GoogleApiClient.Builder(this)
                 .enableAutoManage(this, this)
                 .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
+//                .addApi()
                 .build()
 
         findViewById<Button>(R.id.button2).setOnClickListener{
